@@ -1,0 +1,71 @@
+/* Styles for the header element */
+.header {
+  background-color: #fff; /* Add a background color so content doesn't show through */
+  padding: 20px 0; /* Vertical padding */
+  position: fixed; /* Make the header fixed at the top */
+  top: 0; /* Align to the top edge */
+  left: 0; /* Align to the left edge */
+  right: 0; /* Align to the right edge */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure header is above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1200px; /* Match the max-width in index.css */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Horizontal padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and nav */
+  align-items: center; /* Vertically align items */
+}
+
+/* Styles for the logo/name */
+.logo {
+  font-size: 1.5em; /* Adjust font size */
+  font-weight: bold;
+  color: #333; /* Logo color */
+  font-family: "Ink Free";
+}
+
+/* Styles for the navigation menu */
+.nav ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Arrange list items in a row */
+}
+
+.nav li {
+  margin-left: 30px; /* Space between navigation items */
+}
+
+.nav a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Navigation link color */
+  font-size: 1em;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav a:hover {
+  color: #007bff; /* Change color on hover (example) */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .nav ul {
+    margin-top: 10px; /* Add space between logo and nav */
+    flex-direction: column; /* Stack nav items vertically */
+  }
+
+  .nav li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between stacked nav items */
+  }
+}

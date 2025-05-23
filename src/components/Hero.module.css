@@ -1,0 +1,86 @@
+/* Styles for the hero section */
+.hero {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: calc(
+    100vh - 80px
+  ); /* Adjust height (e.g., subtract header height) */
+  text-align: center; /* Center text within the hero content */
+  padding: 80px 20px 20px; /* Add padding, adjust top padding based on header height */
+  box-sizing: border-box;
+}
+
+/* Container for the hero content */
+.heroContent {
+  max-width: 800px; /* Limit the width of the content block */
+  margin: 0 auto; /* Center the content block */
+  display: flex; /* Use flexbox to arrange items vertically */
+  flex-direction: column;
+  align-items: center; /* Center items horizontally within the flex container */
+  /* Add padding or margin as needed */
+}
+
+/* Styles for the name */
+.name {
+  font-size: 3em; /* Large font size for the name */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below the name */
+  color: #333;
+}
+
+/* Styles for the description paragraph */
+.description {
+  font-size: 1.2em; /* Adjust font size */
+  margin-top: 20px; /* Space above the description */
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Container for the buttons */
+.buttons {
+  margin-top: 30px; /* Space above the buttons */
+  display: flex; /* Arrange buttons in a row */
+  justify-content: center; /* Center buttons */
+  gap: 20px; /* Space between buttons */
+  text-decoration: none;
+}
+
+/* Specific styles for the Contact button */
+.contactButton {
+  background-color: transparent;
+  color: #007bff; /* Example text color */
+  border-color: #007bff;
+}
+
+.contactButton:hover {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactButton a {
+  text-decoration: none; /* Remove underline in the normal state */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5em; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 10px; /* Adjust space between stacked buttons */
+    text-decoration: none;
+  }
+
+  .profilePicture {
+    width: 100px; /* Adjust image size for smaller screens */
+    height: 100px;
+  }
+}

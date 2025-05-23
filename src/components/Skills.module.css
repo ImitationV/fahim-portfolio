@@ -1,0 +1,218 @@
+/* Styles for the combined Skills & Certification section */
+.skillsSection {
+  padding: 80px 20px; /* Padding for the section */
+  background-color: #e9e9e9; /* A different background color */
+  text-align: center; /* Center content */
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1200px; /* Match the max-width in index.css */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Styles for the main section title */
+.sectionTitle {
+  font-size: 2.5em;
+  margin-bottom: 40px; /* Space below the main title */
+  color: #333;
+}
+
+/* Styles for the Skills Sub-section container */
+.skillsSubSection {
+  margin-bottom: 60px; /* Space between Skills and Certifications */
+}
+
+/* Optional intro text for skills section */
+.skillsIntroText {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Center and add space below */
+  color: #555;
+}
+
+/* Styles for the skill icons grid */
+.skillsGrid {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Responsive columns */
+  gap: 30px; /* Space between grid items */
+  justify-items: center; /* Center grid items horizontally */
+  align-items: start; /* Align items to the top */
+}
+
+/* Styles for individual skill items */
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  padding: 20px;
+  background-color: #fff; /* White background for each skill item */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  width: 100%; /* Ensure item takes full width of its grid cell */
+  box-sizing: border-box; /* Include padding in width */
+  height: 100%;
+}
+
+.skillItem:hover {
+  transform: translateY(-10px); /* Lift up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Styles for the skill icon (img tag) */
+.skillIcon {
+  width: 50px; /* Set the width of the SVG image */
+  height: 50px; /* Set the height of the SVG image (adjust as needed) */
+  margin-bottom: 10px; /* Space below the icon */
+  object-fit: contain; /* Ensure the entire icon is visible */
+}
+
+/* Styles for the skill name */
+.skillName {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Styles for the skill description (optional) */
+.skillDescription {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Styles for the Certification Sub-section container */
+
+/* Styles for the Certification Sub-title */
+.certificationSubTitle {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Optional intro text for certification section */
+.certificationIntroText {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Center and add space below */
+  color: #555;
+}
+
+/* Styles for the list of certifications */
+.certificationList {
+  display: flex;
+  flex-direction: column; /* Stack certifications vertically */
+  gap: 20px; /* Space between certification items */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Styles for individual certification items */
+.certificationItem {
+  background-color: #fff; /* White background for each item */
+  padding: 25px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align text to the left within the item */
+  max-width: 700px; /* Limit the width of each item */
+  width: 100%; /* Ensure item takes full width up to max-width */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.certificationItem:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+/* Styles for the certification name */
+.certificationName {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styles for the organization and date */
+.certificationOrgDate {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Styles for the view credential link */
+.certificationLink {
+  display: inline-block; /* Allows padding and margin */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 8px 15px;
+  border-radius: 5px; /* Rounded button corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.certificationLink:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle,
+  .certificationSubTitle {
+    font-size: 2em;
+  }
+
+  .skillsIntroText,
+  .certificationIntroText {
+    font-size: 1em;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(100px, 1fr)
+    ); /* Adjust columns */
+    gap: 20px; /* Adjust gap */
+  }
+
+  .skillItem {
+    padding: 15px; /* Adjust padding */
+  }
+
+  .skillIcon {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .skillName {
+    font-size: 1em;
+  }
+
+  .skillDescription {
+    font-size: 0.8em;
+  }
+
+  .certificationItem {
+    padding: 20px; /* Adjust padding */
+  }
+
+  .certificationName {
+    font-size: 1.2em;
+  }
+
+  .certificationOrgDate {
+    font-size: 0.9em;
+  }
+
+  .certificationLink {
+    padding: 6px 12px; /* Adjust padding */
+    font-size: 0.8em; /* Adjust font size */
+  }
+}
