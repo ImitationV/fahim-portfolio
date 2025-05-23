@@ -1,0 +1,164 @@
+/* Styles for the Portfolio section */
+.portfolioSection {
+  padding: 80px 20px; /* Padding for the section */
+  background-color: #f0f0f0; /* A slightly different background */
+  /* Add margin-top if needed */
+  /* margin-top: 50px; */
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1200px; /* Match the max-width in index.css */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Styles for the section title */
+.sectionTitle {
+  text-align: center; /* Center the title */
+  font-size: 2.5em;
+  margin-bottom: 20px; /* Reduced space below title to make room for filters */
+  color: #333;
+}
+
+/* Styles for the filter options container */
+.filterOptions {
+  text-align: center; /* Center the filter buttons - Although flexbox is used, this can be a fallback */
+  margin-bottom: 40px; /* Space below the filters and above the grid */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons horizontally within the flex container */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+  gap: 10px; /* Space between filter buttons */
+}
+
+/* Styles for individual filter buttons */
+.filterButton {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 20px; /* More rounded shape */
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #ddd;
+  border-color: #bbb;
+}
+
+/* Styles for the active filter button */
+.activeFilter {
+  background-color: #007bff; /* Highlight color for active filter */
+  color: #fff;
+  border-color: #007bff;
+}
+
+.activeFilter:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Styles for the project grid */
+.projectGrid {
+  display: grid; /* Use CSS Grid for the layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Responsive columns */
+  gap: 30px; /* Space between grid items */
+}
+
+/* Styles for individual project items */
+.projectItem {
+  position: relative; /* Needed for positioning the overlay */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  border-radius: 10px; /* Rounded corners for project items */
+  cursor: pointer; /* Indicate it's clickable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.projectItem:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+}
+
+/* Styles for project thumbnail images */
+.projectImage {
+  display: block; /* Remove extra space below image */
+  width: 100%; /* Image takes full width of its container */
+  height: 200px; /* Fixed height for consistency - adjust as needed */
+  object-fit: cover; /* Cover the area without distortion */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.projectItem:hover .projectImage {
+  transform: scale(1.1); /* Slightly zoom image on hover */
+}
+
+/* Styles for the hover overlay */
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with opacity */
+  color: #fff; /* White text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade in */
+  text-align: center;
+}
+
+.projectItem:hover .projectOverlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Styles for project title in overlay */
+.projectTitle {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Styles for short description in overlay */
+.projectShortDescription {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Adjust columns */
+    gap: 20px; /* Adjust gap */
+  }
+
+  .projectImage {
+    height: 150px; /* Adjust image height */
+  }
+
+  .projectTitle {
+    font-size: 1.2em; /* Adjust title size */
+  }
+
+  .projectShortDescription {
+    font-size: 0.9em; /* Adjust description size */
+  }
+
+  .filterOptions {
+    gap: 8px; /* Adjust gap for smaller screens */
+  }
+
+  .filterButton {
+    padding: 6px 12px; /* Adjust padding */
+    font-size: 0.8em; /* Adjust font size */
+  }
+}

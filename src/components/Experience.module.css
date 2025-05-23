@@ -1,0 +1,145 @@
+/* Styles for the Experience section */
+.experienceSection {
+  padding: 80px 20px; /* Padding for the section */
+  background-color: #fff; /* White background for contrast */
+  text-align: center; /* Center content */
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1000px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Styles for the section title */
+.sectionTitle {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Optional intro text for experience section */
+.experienceIntroText {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Center and add space below */
+  color: #555;
+}
+
+/* Styles for the list of experience items */
+.experienceList {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 40px; /* Space between experience items */
+}
+
+/* Styles for individual experience items */
+.experienceItem {
+  background-color: #f9f9f9; /* Light background for each item */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: left; /* Align text to the left within the item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border-left: 5px solid #007bff; /* Add a colored border on the left */
+}
+
+.experienceItem:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+/* Styles for the header within an experience item (title and dates) */
+.experienceHeader {
+  display: flex;
+  justify-content: space-between; /* Space out title and dates */
+  align-items: center; /* Vertically align */
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Styles for the job/internship title */
+.experienceTitle {
+  font-size: 1.5em;
+  margin: 0; /* Remove default margin */
+  color: #333;
+}
+
+/* Styles for the dates */
+.experienceDates {
+  font-size: 1em;
+  color: #555;
+  flex-shrink: 0; /* Prevent shrinking on wrap */
+}
+
+/* Styles for the company name */
+.experienceCompany {
+  font-size: 1.1em;
+  color: #007bff; /* Company name color */
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Styles for the description list */
+.experienceDescriptionList {
+  list-style: disc; /* Use bullet points */
+  padding-left: 20px; /* Indent the list */
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* Styles for individual description list items */
+.experienceDescriptionItem {
+  margin-bottom: 10px; /* Space between list items */
+  line-height: 1.6;
+}
+
+.experienceDescriptionItem:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last item */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .experienceIntroText {
+    font-size: 1em;
+  }
+
+  .experienceItem {
+    padding: 20px; /* Adjust padding */
+  }
+
+  .experienceHeader {
+    flex-direction: column; /* Stack title and dates vertically */
+    align-items: flex-start; /* Align to the start */
+    margin-bottom: 5px;
+  }
+
+  .experienceTitle {
+    font-size: 1.3em;
+    margin-bottom: 5px; /* Space below title when stacked */
+  }
+
+  .experienceDates {
+    font-size: 0.9em;
+  }
+
+  .experienceCompany {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .experienceDescriptionList {
+    padding-left: 15px; /* Adjust indentation */
+  }
+
+  .experienceDescriptionItem {
+    margin-bottom: 8px; /* Adjust space between list items */
+  }
+}

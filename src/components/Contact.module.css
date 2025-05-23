@@ -1,0 +1,162 @@
+/* Styles for the Contact section */
+.contactSection {
+  padding: 80px 0 0; /* Remove horizontal padding from the section, add bottom padding later if needed */
+  background-color: #e9e9e9; /* A different background color */
+  text-align: center; /* Center content within the section */
+  overflow-x: hidden; /* Prevent horizontal scroll caused by full-width map */
+}
+
+/* Container to limit width and center content (used for text and info) */
+.container {
+  max-width: 1000px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add back horizontal padding for content within the container */
+  box-sizing: border-box; /* Include padding in width */
+  margin-bottom: 60px; /* Space below contact content and above the map */
+}
+
+/* Styles for the section title */
+.sectionTitle {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Optional intro text for contact section */
+.contactIntroText {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px; /* Center and add space below */
+  color: #555;
+}
+
+/* Styles for contact information block */
+.contactInfo {
+  /* flex: 1; /* Removed flex properties as it's no longer in a flex container with the form */
+  text-align: center; /* Center text within the contact info block */
+  /* Removed background, padding, shadow as per the design image */
+  /* background-color: #fff; */
+  /* padding: 30px; */
+  /* border-radius: 10px; */
+  /* Corrected the commented-out box-shadow syntax */
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.contactInfo h3 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contactInfo p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Styles for the container of social icons within contact info */
+.contactSocialIcons {
+  margin-top: 20px; /* Space above the icons */
+  display: flex; /* Use flexbox to arrange icons */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+/* Styles for individual social icon links */
+.contactSocialIcons a {
+  display: flex; /* Use flexbox to center icon inside link */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  width: 50px; /* Size of the icon container */
+  height: 50px; /* Size of the icon container */
+  border: 2px solid #007bff; /* Border around the icon */
+  border-radius: 50%; /* Make it circular */
+  color: #007bff; /* Icon color */
+  font-size: 1.8em; /* Size of the icon itself */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.contactSocialIcons a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Removed Contact Form styles */
+/* ... form styles ... */
+
+/* Styles for the map container (full width) */
+.mapContainer {
+  margin-top: 40px; /* Space above the map */
+  background-color: #fff; /* White background for the map area */
+  padding: 20px 0; /* Remove horizontal padding, keep vertical */
+  /* Removed border-radius and box-shadow from here as per design */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100vw; /* Make it full viewport width */
+  position: relative; /* Needed to position relative to viewport */
+  left: 50%; /* Move the left edge to the center */
+  transform: translateX(-50%); /* Shift back by half its width to center */
+}
+
+.mapContainer h3 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Center the map title */
+}
+
+/* Styles for the OpenStreetMap iframe */
+.osmMap {
+  border: none; /* Remove iframe border */
+  display: block; /* Remove extra space below iframe */
+  width: 100%; /* Ensure iframe takes full width of its container */
+  height: 400px; /* Ensure iframe takes full height of its container */
+  filter: grayscale(60%);
+}
+
+/* Styles for the map caption */
+.mapCaption {
+  font-size: 1em;
+  color: #555;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .contactIntroText {
+    font-size: 1em;
+  }
+
+  /* Removed contactContent flex styles */
+  /* .contactContent { ... } */
+
+  .contactInfo h3 {
+    font-size: 1.5em; /* Adjust title size */
+  }
+
+  .contactInfo p {
+    font-size: 1em; /* Adjust text size */
+  }
+
+  .contactSocialIcons a {
+    width: 40px; /* Adjust icon container size */
+    height: 40px;
+    font-size: 1.5em; /* Adjust icon size */
+  }
+
+  .mapContainer {
+    padding: 15px 0; /* Adjust vertical padding, keep horizontal 0 */
+  }
+
+  .mapContainer h3 {
+    font-size: 1.5em; /* Adjust map title size */
+  }
+}

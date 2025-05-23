@@ -1,0 +1,202 @@
+/* Styles for the Intro section */
+.introSection {
+  padding: 80px 20px; /* Padding for the section */
+  background-color: #fff; /* White background for contrast */
+  /* Add margin-top if needed to create space below the Hero section */
+  /* margin-top: 50px; */
+  text-align: center; /* Center content within the section */
+}
+
+/* Container to limit width and center content */
+.container {
+  max-width: 1200px; /* Match the max-width in index.css */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Styles for the section title */
+.sectionTitle {
+  text-align: center; /* Center the title */
+  font-size: 2.5em;
+  margin-bottom: 20px; /* Space below the title */
+  color: #333;
+}
+
+/* Styles for the intro picture */
+.introPicture {
+  width: 180px; /* Set the width of the image */
+  height: 180px; /* Set the height of the image (should match width for a perfect circle) */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  margin: 0 auto 40px; /* Center the image horizontally and add space below */
+  display: block; /* Make it a block element to apply margin: auto for centering */
+  border: 5px solid #000000; /* Optional: Add a border around the picture */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Optional: Add a subtle shadow */
+}
+
+/* Styles for the introduction text */
+.introText {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; /* Center the text */
+  max-width: 800px; /* Limit width for readability */
+  margin: 0 auto 60px; /* Center and add space below */
+  color: #555;
+}
+
+/* Styles for the timeline container */
+.timeline {
+  margin-top: 40px; /* Space above the timeline */
+  position: relative; /* Needed for positioning the horizontal line */
+  padding-bottom: 60px; /* Add space below the timeline for the line */
+}
+
+/* Styles for the timeline title */
+.timelineTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px; /* Space below the timeline title */
+  color: #333;
+}
+
+/* Container for timeline items - Use Flexbox for horizontal layout */
+.timelineItems {
+  display: flex; /* Arrange items horizontally */
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: flex-start; /* Align items to the top */
+  padding: 0 20px; /* Add some horizontal padding */
+  margin: 0;
+  list-style: none;
+  position: relative; /* Needed for positioning the horizontal line */
+}
+
+/* Horizontal line for the timeline */
+.timelineItems::before {
+  content: "";
+  position: absolute;
+  top: 25px; /* Position vertically centered relative to dots */
+  left: 0;
+  right: 0;
+  height: 2px; /* Thickness of the line */
+  background-color: #ddd; /* Color of the line */
+  z-index: 0; /* Ensure line is behind dots and content */
+}
+
+/* Styles for individual timeline items */
+.timelineItem {
+  margin-bottom: 0; /* Remove vertical margin */
+  position: relative;
+  width: 20%; /* Adjust width based on number of items */
+  padding: 40px 10px 10px; /* Add padding top for the dot, horizontal padding */
+  box-sizing: border-box;
+  text-align: center; /* Center content within the item */
+  display: flex; /* Use flexbox to stack dot and content */
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Remove left/right positioning from vertical timeline */
+.timelineItem:nth-child(odd),
+.timelineItem:nth-child(even) {
+  left: auto;
+}
+
+/* Styles for the dot on the timeline line */
+.timelineDot {
+  position: absolute;
+  top: 18px; /* Position vertically to align with the horizontal line */
+  left: 50%; /* Center the dot horizontally within its item */
+  width: 16px; /* Size of the dot */
+  height: 16px; /* Size of the dot */
+  background-color: #007bff; /* Dot color */
+  border-radius: 50%; /* Make it circular */
+  transform: translateX(-50%); /* Adjust to truly center */
+  border: 3px solid #fff; /* White border around the dot */
+  z-index: 1; /* Ensure dot is above the line */
+}
+
+/* Styles for the content block of each timeline item */
+.timelineContent {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex; /* Make the content container a flex item */
+  flex-direction: column; /* Arrange content vertically inside */
+  min-height: 200px;
+}
+
+/* Styles for the year in the timeline content */
+.timelineYear {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #007bff; /* Year color */
+}
+
+/* Styles for the description in the timeline content */
+.timelineDescription {
+  font-size: 1em;
+  margin-bottom: 0;
+  color: #555;
+}
+
+/* Remove arrows from the horizontal timeline */
+.timelineItem .timelineContent::after {
+  display: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .introPicture {
+    width: 120px; /* Adjust image size for smaller screens */
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  .introText {
+    font-size: 1em;
+  }
+
+  .timelineItems {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .timelineItems::before {
+    left: 20px; /* Move the line to the left */
+    right: auto;
+    width: 2px; /* Make the line vertical again */
+    height: calc(100% - 40px); /* Adjust height */
+    top: 20px;
+  }
+
+  .timelineItem {
+    width: 100%; /* Items take full width */
+    left: 0 !important; /* Override left positioning */
+    padding: 10px 10px 10px 60px; /* Adjust padding for vertical layout */
+    margin-bottom: 30px; /* Add vertical margin back */
+    text-align: left; /* Align text to the left */
+    flex-direction: row; /* Arrange dot and content horizontally */
+    align-items: center; /* Vertically align dot and content */
+  }
+
+  .timelineDot {
+    position: static; /* Reset positioning */
+    transform: none;
+    margin-right: 20px; /* Space between dot and content */
+  }
+
+  .timelineContent {
+    margin-top: 0; /* Remove top margin */
+    flex-grow: 1; /* Allow content to take available space */
+  }
+}

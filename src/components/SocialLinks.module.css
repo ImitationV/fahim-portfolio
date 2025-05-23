@@ -1,0 +1,33 @@
+/* Container for social icons */
+.socialIcons {
+  margin-top: 20px; /* Space above social icons */
+  margin-bottom: 20px; /* Space below social icons */
+  display: flex; /* Arrange icons in a row */
+  justify-content: center; /* Center icons */
+  gap: 15px; /* Space between icons */
+}
+
+.socialIcons a {
+  display: flex; /* Use flexbox to center icon and text if needed */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Horizontally align items */
+  width: 40px; /* Set icon size */
+  height: 40px; /* Set icon size */
+  border: 1px solid #333; /* Border around icons */
+  border-radius: 50%; /* Make them circular */
+  color: #333; /* Icon color */
+  transition: all 0.3s ease; /* Smooth transitions */
+  text-decoration: none; /* Remove underline */
+}
+
+.socialIcons a:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* If using react-icons, you might need to style the SVG */
+.socialIcons a svg {
+  width: 20px; /* Adjust SVG size */
+  height: 20px; /* Adjust SVG size */
+}
