@@ -43,16 +43,46 @@ const projects = [
     title: 'Budget Buddy',
     image: 'src/assets/budgetbuddy.jpg',
     shortDescription: 'Budgeting app to track expenses and income.',
-    fullDescription: 'A budgeting app that helps users track their expenses and income, providing insights into their financial habits and helping them save money. It includes features like expense categorization, chat bot, stock analyzer and visualizations of spending patterns.',
+    fullDescription: 'A budgeting app that helps users track their expenses and income, providing insights into their financial habits and helping them save money. It includes features like expense categorization, chat bot, stock analyzer and visualizations of spending patterns. [Group Project]',
     technologies: ['React', 'Node.js', 'Machine Learning', 'Supbase', 'CSS', 'HTML', 'Python'],
     githubLink: 'https://github.com/ImitationV/capstone',
     category: 'Web Development', // Add category
+  },
+    {
+    id: 5,
+    title: 'Retail Sales Analysis',
+    image: 'src/assets/retail.jpg',
+    shortDescription: 'Retail sales analysis using SQL.',
+    fullDescription: 'This project performs a retail sales analysis using SQL. The goal is to gain insights into sales trends, customer behavior, and product performance. The analysis includes data cleaning, exploration, and answering specific business questions through SQL queries.',
+    technologies: ['PostgreSQL', 'Excel'],
+    githubLink: 'https://github.com/ImitationV/analytics-portfolio/tree/main/Retail%20Sales%20Analysis%20(SQL)',
+    category: 'Data Analytics', // Add category
+  },
+    {
+    id: 6,
+    title: 'Library Management System',
+    image: 'src/assets/library.jpg',
+    shortDescription: 'Library management system to manage books and users.',
+    fullDescription: 'This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries.',
+    technologies: ['PostgreSQL', 'Excel'],
+    githubLink: 'https://github.com/ImitationV/analytics-portfolio/tree/main/Library%20Management%20System%20(SQL)',
+    category: 'Data Analytics', // Add category
+  },
+  {
+    id: 7,
+    title: 'Byte Sized Projects',
+    image: 'src/assets/mini.webp',
+    shortDescription: 'A collection of mini projects using python.',
+    fullDescription: 'This project is a collection of mini projects that demonstrate various Python programming concepts and libraries. Some of these projects does not have GUI.',
+    technologies: ['pynput'],
+    githubLink: 'https://github.com/ImitationV/byte-sized-projects/tree/master/pynput',
+    category: 'Python', // Add category
   },
   // Add more project objects here with appropriate categories
 ];
 
 // Define filter categories
-const filterCategories = ['All', 'Data Analytics', 'Web Development',  'Other']; // Add your categories
+const filterCategories = ['All', 'Data Analytics', 'Web Development', 'Python']; // Add your categories
 
 function Portfolio() {
   // State to manage which project is currently selected for the modal
