@@ -1,4 +1,5 @@
 import React from 'react';
+import fn from '../assets/fn.png'; // Import your image
 import styles from './Intro.module.css'; // Import styles using CSS Modules
 
 function Intro() {
@@ -8,10 +9,8 @@ function Intro() {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Introduction</h2> {/* Section Title */}
 
-
-
         <img
-          src="src/assets/fn.png" // Path to your image
+          src={fn} // Path to your image
           alt="picture" // Important for accessibility
           className={styles.introPicture} // Apply the CSS module class for styling
         />

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProjectModal.module.css'; // Import styles
 
 // ProjectModal component receives project data and a function to close the modal

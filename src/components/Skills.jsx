@@ -1,5 +1,13 @@
 import React from 'react';
 import styles from './Skills.module.css'; // Import styles using CSS Modules
+import pythonIcon from '../assets/Python.svg';
+import javaIcon from '../assets/Java.svg';
+import postgresIcon from '../assets/PostgresSQL.svg';
+import mongoIcon from '../assets/MongoDB.svg';
+import gitIcon from '../assets/Git.svg';
+import officeIcon from '../assets/office.svg';
+import powerbiIcon from '../assets/powerbi.svg';
+import excelIcon from '../assets/excel.svg';
 
 // No react-icons imports needed anymore as we are using SVG images
 
@@ -7,14 +15,14 @@ function Skills() {
   // Define your skills with paths to SVG image files
   // Place your SVG files in the 'public' folder and use paths relative to 'public'
   const skills = [
-    { name: 'Python', image: 'src/assets/Python.svg', description: 'Matplotlib, Numpy, Pandas, Seaborn, Scikit-learn' },
-    { name: 'Java', image: 'src/assets/Java.svg', description: 'Backend Development, Data Processing, JUnit' },
-    { name: 'PostgreSQL', image: 'src/assets/PostgresSQL.svg', description: 'Database Design, SQL Queries,  Triggers and Events, Indexes' },
-    { name: 'MongoDB', image: 'src/assets/MongoDB.svg', description: 'MongoDB Compass, Basic Queries, Aggregation Framework' },
-    { name: 'Git', image: 'src/assets/Git.svg', description: 'Staging and Branching, Remote Repositories, Github' },
-    { name: 'Microsoft Office', image: 'src/assets/office.svg', description: 'Word, PowerPoint, Outlook, Access' },
-    { name: 'Power BI', image: 'src/assets/powerbi.svg', description: 'Interactive Dashboards, Data Visualization, DAX' },
-    { name: 'Excel', image: 'src/assets/excel.svg', description: 'Formulas and Functions,  Pivot Tables, Charts' },
+    { name: 'Python', image: pythonIcon, description: 'Matplotlib, Numpy, Pandas, Seaborn, Scikit-learn' },
+    { name: 'Java', image: javaIcon, description: 'Backend Development, Data Processing, JUnit' },
+    { name: 'PostgreSQL', image: postgresIcon, description: 'Database Design, SQL Queries,  Triggers and Events, Indexes' },
+    { name: 'MongoDB', image: mongoIcon, description: 'MongoDB Compass, Basic Queries, Aggregation Framework' },
+    { name: 'Git', image: gitIcon, description: 'Staging and Branching, Remote Repositories, Github' },
+    { name: 'Microsoft Office', image: officeIcon, description: 'Word, PowerPoint, Outlook, Access' },
+    { name: 'Power BI', image: powerbiIcon, description: 'Interactive Dashboards, Data Visualization, DAX' },
+    { name: 'Excel', image: excelIcon, description: 'Formulas and Functions,  Pivot Tables, Charts' },
     // Add more skills here with their SVG paths
   ];
 

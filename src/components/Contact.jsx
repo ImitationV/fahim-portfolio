@@ -1,4 +1,4 @@
-import React from 'react'; // No useState or useRef needed without the form
+
 import styles from './Contact.module.css'; // Import styles using CSS Modules
 // Import icons from react-icons/fa
 // Make sure you have react-icons installed: npm install react-icons --save

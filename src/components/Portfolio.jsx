@@ -1,6 +1,15 @@
-import React, { useState, useMemo } from 'react'; // Import useState and useMemo
+import { useState, useMemo } from 'react'; // Import useState and useMemo
 import styles from './Portfolio.module.css'; // Import styles
 import ProjectModal from './ProjectModal'; // Import the Modal component
+
+// Import images
+import strokeImg from '../assets/stroke.webp';
+import todoImg from '../assets/todo.jpg';
+import nychaImg from '../assets/nycha.png';
+import budgetbuddyImg from '../assets/budgetbuddy.jpg';
+import retailImg from '../assets/retail.jpg';
+import libraryImg from '../assets/library.jpg';
+import miniImg from '../assets/mini.webp';
 
 // Sample project data
 // Add a 'category' property to each project
@@ -8,7 +17,7 @@ const projects = [
   {
     id: 1,
     title: 'Stroke Prediction Project',
-    image: 'src/assets/stroke.webp', // Replace with your thumbnail image path
+    image: strokeImg, // Use imported image
     shortDescription: 'Analytics on stroke risk using python libraries.',
     fullDescription: 'This project focuses on analyzing health-related data to predict the likelihood of a stroke using machine learning techniques. It involves data preprocessing, handling imbalanced datasets, building predictive models, and evaluating their performance.',
     technologies: ['Python', 'Seaborn', 'Pandas', 'statsmodel'],
@@ -19,7 +28,7 @@ const projects = [
   {
     id: 2,
     title: 'To Do List',
-    image: 'src/assets/todo.jpg',
+    image: todoImg,
     shortDescription: 'Simple and fast to-do list application.',
     fullDescription: 'A simple and fast to-do list application built with React, featuring user authentication and real-time data storage using Supabase.',
     technologies: ['React', 'Supabase', 'CSS'],
@@ -30,7 +39,7 @@ const projects = [
   {
     id: 3,
     title: 'How much space do NYCHA residents have in their apartments?',
-    image: 'src/assets/nycha.png',
+    image: nychaImg,
     shortDescription: 'Data analysis on NYCHA apartments.',
     fullDescription: 'This project analyzes the average square footage of NYCHA apartments and compares it to the average square footage of apartments in New York City. It uses data from the NYC Open Data portal and visualizes the results using Python libraries.',
     technologies: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
@@ -41,7 +50,7 @@ const projects = [
   {
     id: 4,
     title: 'Budget Buddy',
-    image: 'src/assets/budgetbuddy.jpg',
+    image: budgetbuddyImg,
     shortDescription: 'Budgeting app to track expenses and income.',
     fullDescription: 'A budgeting app that helps users track their expenses and income, providing insights into their financial habits and helping them save money. It includes features like expense categorization, chat bot, stock analyzer and visualizations of spending patterns. [Group Project]',
     technologies: ['React', 'Node.js', 'Machine Learning', 'Supbase', 'CSS', 'HTML', 'Python'],
@@ -51,7 +60,7 @@ const projects = [
     {
     id: 5,
     title: 'Retail Sales Analysis',
-    image: 'src/assets/retail.jpg',
+    image: retailImg,
     shortDescription: 'Retail sales analysis using SQL.',
     fullDescription: 'This project performs a retail sales analysis using SQL. The goal is to gain insights into sales trends, customer behavior, and product performance. The analysis includes data cleaning, exploration, and answering specific business questions through SQL queries.',
     technologies: ['PostgreSQL', 'Excel'],
@@ -61,7 +70,7 @@ const projects = [
     {
     id: 6,
     title: 'Library Management System',
-    image: 'src/assets/library.jpg',
+    image: libraryImg,
     shortDescription: 'Library management system to manage books and users.',
     fullDescription: 'This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries.',
     technologies: ['PostgreSQL', 'Excel'],
@@ -71,7 +80,7 @@ const projects = [
   {
     id: 7,
     title: 'Byte Sized Projects',
-    image: 'src/assets/mini.webp',
+    image: miniImg,
     shortDescription: 'A collection of mini projects using python.',
     fullDescription: 'This project is a collection of mini projects that demonstrate various Python programming concepts and libraries. Some of these projects does not have GUI.',
     technologies: ['pynput'],
